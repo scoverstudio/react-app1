@@ -10,3 +10,9 @@
     border-radius: $radius;
 
 }
+
+@media (max-width: 767px) {
+  .input {
+    min-width: 100px;
+  }
+}
