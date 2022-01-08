@@ -3,6 +3,8 @@ import shortid from "shortid";
 import initialState from "./initialState";
 import strContains from "../utils/strContains";
 
+// selectors
+
 export const getFilteredCards = ({ cards, searchString }, columnId) =>
   cards.filter(
     card => card.columnId === columnId && strContains(card.title, searchString)
@@ -10,9 +12,13 @@ export const getFilteredCards = ({ cards, searchString }, columnId) =>
 
 export const getAllColumns = state => state.columns;
 
+// action creators
+
 export const addColumn = payload => ({ type: "ADD_COLUMN", payload });
 
 export const addCard = payload => ({ type: "ADD_CARD", payload });
+
+// reducers
 
 export const addSearchString = payload => ({
   type: "UPDATE_SEARCHSTRING",
@@ -42,6 +48,8 @@ const reducer = (state, action) => {
       return state;
   }
 };
+
+// store
 
 const store = createStore(
   reducer,
