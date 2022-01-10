@@ -1,6 +1,6 @@
 import styles from "./TextInput.module.scss";
 
-const TextInput = ({value, onChange, placeholder}) => {
+const TextInput = ({ value, onChange, placeholder }) => {
   return (
     <input
       className={styles.input}
