@@ -30,6 +30,10 @@ export const addSearchString = payload => ({
   type: "UPDATE_SEARCHSTRING",
   payload,
 });
+export const clearSearchString = payload => ({
+  type: "CLEAR_SEARCHSTRING",
+  payload,
+});
 
 // reducers
 
@@ -48,6 +52,11 @@ const reducer = (state, action) => {
       };
 
     case "UPDATE_SEARCHSTRING":
+      return {
+        ...state,
+        searchString: action.payload,
+      };
+    case "CLEAR_SEARCHSTRING":
       return {
         ...state,
         searchString: action.payload,
