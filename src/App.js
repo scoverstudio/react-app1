@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar/NavBar.js";
 import Home from "./Home/Home.js";
 import { Routes, Route } from "react-router-dom";
 import WrongPage from "./components/WrongPage/WrongPage";
+import List from "./components/List/List";
 
 const App = () => {
   return (
@@ -13,8 +14,9 @@ const App = () => {
       <Container>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
           <Route path="/favorite" element={<Favorite />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/list/:listId" element={<List />} />
           <Route
             path="*"
             element={<WrongPage />}

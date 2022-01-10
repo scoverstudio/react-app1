@@ -31,6 +31,9 @@ nav {
             font-size: 16px;
             margin-right: 20px;
           }
+          .linkActive {
+            color: $color-warning;
+          }
         }
       }
     }
