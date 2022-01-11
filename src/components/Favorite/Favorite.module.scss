@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "../../styles/settings.scss";
 
 .title {
@@ -6,3 +7,16 @@
   font-size: ($base-size * 3);
   text-transform: uppercase;
 }
+.cards {
+  padding: math.div($base-size, 2) 0;
+  width: 400px;
+  margin: 0 auto
+}
+
+@media (max-width: 767px) {
+  .cards {
+    width: 100%;
+    margin: 0 0 $base-size 0;
+  }
+}
+

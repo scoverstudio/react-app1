@@ -10,4 +10,27 @@
   display: flex;
   justify-content: space-between;
   font-weight: bold;
+
+  h3{
+    color: black;
+    font-size: 13px;
+  }
+
+  button {
+    background-color: $color-light;
+    color: $color-dark;
+    border: none;
+
+      &:hover {
+        color: $color-favorite;
+      }
+      &.favorite{
+        color: $color-favorite;
+      }
+
+    span {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
 }

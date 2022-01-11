@@ -9,10 +9,11 @@ const CardForm = ({ columnId }) => {
   const [title, setTitle] = useState("");
 
   const dispatch = useDispatch();
+  const isFavorite = false;
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(addCard({ title, columnId }));
+    dispatch(addCard({ title, columnId, isFavorite }));
     setTitle("");
   };
 
