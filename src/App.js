@@ -2,7 +2,7 @@ import About from "./components/About/About";
 import Container from "./components/Container/Container.js";
 import Favorite from "./components/Favorite/Favorite.js";
 import NavBar from "./components/NavBar/NavBar.js";
-import Home from "./Home/Home.js";
+import Home from "./components/Home/Home";
 import { Routes, Route } from "react-router-dom";
 import WrongPage from "./components/WrongPage/WrongPage";
 import List from "./components/List/List";
