@@ -9,8 +9,8 @@ import { Navigate } from "react-router-dom";
 
 const List = () => {
   const { listId } = useParams();
-  const columns = useSelector(state => getColumnsByList(state, listId));
-  const listData = useSelector(state => getListById(state, listId));
+  const columns = useSelector((state) => getColumnsByList(state, listId));
+  const listData = useSelector((state) => getListById(state, listId));
 
   if (!listData) return <Navigate to='/' />;
   return (
@@ -21,7 +21,7 @@ const List = () => {
       <p className={styles.description}>{listData.description}</p>
       <SearchForm />
       <section className={styles.columns}>
-        {columns.map(column => (
+        {columns.map((column) => (
           <Column key={column.id} {...column} />
         ))}
       </section>

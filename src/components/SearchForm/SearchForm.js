@@ -9,18 +9,20 @@ const SearchForm = () => {
   const [string, setString] = useState("");
   const dispatch = useDispatch();
 
-  const handleSearch = e => {
+  const handleSearch = (e) => {
     e.preventDefault();
     dispatch(addSearchString(string));
   };
+
   useEffect(() => {
     dispatch(clearSearchString(""));
   }, [window.location]);
+
   return (
     <form className={styles.searchForm}>
       <TextInput
         placeholder='Search...'
-        onChange={e => setString(e.target.value)}
+        onChange={(e) => setString(e.target.value)}
       />
       <Button onClick={handleSearch}>
         <span className='fa fa-search' />

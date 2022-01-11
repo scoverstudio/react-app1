@@ -11,7 +11,7 @@ const ColumnForm = ({ listId }) => {
 
   const dispatch = useDispatch();
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addColumn({ title, icon, listId }));
     setTitle("");
@@ -21,9 +21,9 @@ const ColumnForm = ({ listId }) => {
   return (
     <form className={styles.columnForm} onSubmit={handleSubmit}>
       <span>Title:</span>{" "}
-      <TextInput value={title} onChange={e => setTitle(e.target.value)} />
+      <TextInput value={title} onChange={(e) => setTitle(e.target.value)} />
       <span>Icon:</span>{" "}
-      <TextInput value={icon} onChange={e => setIcon(e.target.value)} />
+      <TextInput value={icon} onChange={(e) => setIcon(e.target.value)} />
       <Button>Add column</Button>
     </form>
   );

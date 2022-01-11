@@ -11,7 +11,7 @@ const CardForm = ({ columnId }) => {
   const dispatch = useDispatch();
   const isFavorite = false;
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addCard({ title, columnId, isFavorite }));
     setTitle("");
@@ -19,7 +19,7 @@ const CardForm = ({ columnId }) => {
 
   return (
     <form className={styles.cardForm} onSubmit={handleSubmit}>
-      <TextInput value={title} onChange={e => setTitle(e.target.value)} />
+      <TextInput value={title} onChange={(e) => setTitle(e.target.value)} />
       <Button>Add card</Button>
     </form>
   );

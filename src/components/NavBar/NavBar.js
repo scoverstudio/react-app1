@@ -10,21 +10,27 @@ const NavBar = () => {
           <ul>
             <li>
               <NavLink
-                className={({ isActive }) => isActive ? styles.linkActive : undefined}
+                className={({ isActive }) =>
+                  isActive ? styles.linkActive : undefined
+                }
                 to='/'>
                 Home
               </NavLink>
             </li>
             <li>
               <NavLink
-                className={({ isActive }) => isActive ? styles.linkActive : undefined}
+                className={({ isActive }) =>
+                  isActive ? styles.linkActive : undefined
+                }
                 to='/favorite'>
                 Favorite
               </NavLink>
             </li>
             <li>
               <NavLink
-                className={({ isActive }) => isActive ? styles.linkActive : undefined}
+                className={({ isActive }) =>
+                  isActive ? styles.linkActive : undefined
+                }
                 to='/about'>
                 About
               </NavLink>

@@ -13,14 +13,11 @@ const App = () => {
       <NavBar />
       <Container>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/favorite" element={<Favorite />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/list/:listId" element={<List />} />
-          <Route
-            path="*"
-            element={<WrongPage />}
-          />
+          <Route path='/' element={<Home />} />
+          <Route path='/favorite' element={<Favorite />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/list/:listId' element={<List />} />
+          <Route path='*' element={<WrongPage />} />
         </Routes>
       </Container>
     </main>
