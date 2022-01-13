@@ -16,7 +16,7 @@ const SearchForm = () => {
 
   useEffect(() => {
     dispatch(clearSearchString(""));
-  }, [window.location]);
+  }, [dispatch]);
 
   return (
     <form className={styles.searchForm}>
