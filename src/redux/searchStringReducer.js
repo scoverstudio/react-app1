@@ -6,7 +6,7 @@ const createActionName = (actionName) => `app/lists/${actionName}`;
 const UPDATE_SEARCHSTRING = createActionName("UPDATE_SEARCHSTRING");
 const CLEAR_SEARCHSTRING = createActionName("CLEAR_SEARCHSTRING");
 
-// action creator
+// action creators
 export const addSearchString = (payload) => ({
     type: UPDATE_SEARCHSTRING,
     payload,
